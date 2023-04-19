@@ -3,6 +3,11 @@ import java.time.LocalDate;
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
+    public static void main(String[] args) {
+        task1();
+        task2();
+        task3();
+    }
 
     public static void checkYear(int year) {
         if (year % 400 == 0) {
@@ -39,8 +44,22 @@ public class Main {
         checkOsAndYear(1, 2022);
     }
 
-    public static void main(String[] args) {
-        task1();
-        task2();
+    public static void calculateDays(int distance) {
+        int days = 0;
+        if (distance < 20) {
+            days = 1;
+        } else if (distance < 60) {
+            days = 2;
+        } else if (distance < 100) {
+            days = 3;
+        } else {
+            System.out.println(" Доставки нет.");
+
+        }
+        if (days > 0) System.out.println("Время доставки составит " + days + " дней.");
+    }
+
+    public static void task3() {
+        calculateDays(95);
     }
 }
