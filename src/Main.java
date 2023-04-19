@@ -14,7 +14,10 @@ public class Main {
             System.out.println(year + " год не является высокосным.");
         }
     }
-    public static void main(String[] args) {
+    public static void task1() {
         checkYear(2023);
+    }
+    public static void main(String[] args) {
+        task1();
         }
     }
