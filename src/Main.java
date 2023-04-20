@@ -44,22 +44,23 @@ public class Main {
         checkOsAndYear(1, 2022);
     }
 
-    public static void calculateDays(int distance) {
-        int days = 0;
+    public static int calculateDays(int distance) {
         if (distance < 20) {
-            days = 1;
+            return 1;
         } else if (distance < 60) {
-            days = 2;
+            return 2;
         } else if (distance < 100) {
-            days = 3;
+            return 3;
         } else {
-            System.out.println(" Доставки нет.");
-
+            return 0;
         }
-        if (days > 0) System.out.println("Время доставки составит " + days + " дней.");
     }
 
     public static void task3() {
-        calculateDays(95);
+        int distance = 95;
+        if (calculateDays(distance) > 0) {
+            System.out.println("Время доставки составит " + calculateDays(distance) + " дней.");
+        } else System.out.println("Доставки нет");
+
     }
 }
